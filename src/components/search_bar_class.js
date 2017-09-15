@@ -8,8 +8,14 @@ constructor(props) {
 }
 
   render() {
-    return <input onChange={event => console.log(event.target.value)} />;
+    // Always manipulate state with this.setState();
+    return (
+      <div>
+        <input onChange={ event => this.setState( {term: event.target.value } ) } />
+      </div>
+    );
   }
+
 }
 
 export default SearchBar;
